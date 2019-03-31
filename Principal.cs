@@ -64,9 +64,8 @@ public class Principal{
                 }
                 dichas.Add(respuesta);
             }
-            catch (Exception e){ 
+            catch (System.Exception){ 
                 Console.WriteLine("Solo puedes meter letras y de una en una.");
-                Console.WriteLine(e);
                 continue;
             }
 
@@ -83,7 +82,7 @@ public class Principal{
                 fase++;
 
                 if(fase >= 6){
-                   Pantalla.Derrota(); 
+                   Pantalla.Derrota(Pregunta.getPalabra()); 
                 }
                 Pantalla.Clear();
                 Pantalla.Resultado(fase, Pregunta.getSubstituida());

@@ -89,7 +89,7 @@ public class Graficos{
             Console.WriteLine("Escribe una nueva letra...");
         }
 
-        public void Derrota(){
+        public void Derrota(string palabra){
             Clear();
             Console.WriteLine(
                 @"
@@ -99,11 +99,22 @@ D  D EEE  FFF  EEE  AAAA   TT   EEE  D  D
 D  D E    F    E    A  A   TT   E    D  D 
 DDD  EEEE F    EEEE A  A   TT   EEEE DDD  ");
 
-            Console.WriteLine("\n\n\n\nPon 'n' para empezar una nueva partida");
-            if(Convert.ToChar(Console.ReadLine()) == 'n'){
-                // Nueva partida
-                Principal.setNuevaPartida(true);
-            }
+            Console.WriteLine("\n\nLa palabra era: {0}", palabra);
+
+            bool flag = false;
+            do{
+                try{
+                    if (Convert.ToChar(Console.ReadLine()) == 'n'){
+                        // Nueva partida
+                        Principal.setNuevaPartida(true);
+                        Clear();
+                        flag = true;
+                    }
+                }
+                catch (System.Exception){
+                    Console.WriteLine("Error, introduce 'n' para emepezar una partida nueva");
+                }
+            } while (flag == false);
         }
 
 
@@ -117,11 +128,21 @@ V     V  I  C      TT   O   O R   R  Y Y
    V    III  CCC   TT    OOO  R  RR   Y   ");
 
             Console.WriteLine("\n\n\n\nPon 'n' para empezar una nueva partida");
-            if (Convert.ToChar(Console.ReadLine()) == 'n')
-            {
-                // Nueva partida
-                Principal.setNuevaPartida(true);
-                Clear();
-            }
+            bool flag = false;
+            do{
+                try{
+                    if (Convert.ToChar(Console.ReadLine()) == 'n'){
+                        // Nueva partida
+                        Principal.setNuevaPartida(true);
+                        Clear();
+                        flag = true;
+                    }
+                }
+                catch (System.Exception){
+                    Console.WriteLine("Error, introduce 'n' para emepezar una partida nueva");
+                }
+            } while (flag == false);
+            
+
         }
 }
