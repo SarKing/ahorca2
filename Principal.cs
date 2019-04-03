@@ -8,6 +8,7 @@ using System.Collections;
     * Rechazar las letras ya dichas
     * Que la consola haga un sonidito cuando falle??
     * Ignorar mayúsculas y acentos
+    - Metodos estaticos?
     - https://es.wiktionary.org/wiki/Ap%C3%A9ndice:Palabras_m%C3%A1s_frecuentes_del_espa%C3%B1ol
       En ese link hay un huevo de palabras aleatorias para poner aquí
       como son muchas mi idea es ponerlas en un .txt aparte y elegir una
@@ -21,9 +22,6 @@ public class Principal{
 
     public static void Main(){
         
-        Graficos Pantalla = new Graficos();
-        Pregunta Pregunta = new Pregunta();
-
         ArrayList dichas = new ArrayList();
         dichas.Add(' ');
 
