@@ -143,4 +143,9 @@ V     V  I  C      TT   O   O R   R  Y Y
                 }
             } while (flag == false);
         }
+
+
+        private void Skere(){
+            Console.WriteLine("Skeeereeeeee");
+        }
 }
